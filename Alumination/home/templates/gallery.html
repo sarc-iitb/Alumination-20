@@ -1,2 +1,66 @@
 {% extends "nav.html" %}
 {% load static %}
+
+{% block head %}
+	<title>Gallery</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="{% static 'css/book.css' %}">
+	<link type="text/css" rel="stylesheet" href="{% static 'css/neon.css' %}">
+    <style>
+    #alumination_loader_sreyashi {
+        width: 100%;
+        margin-left: 0;
+        left: -8vw;
+        margin-top: 42vh;
+    }
+    .heading h1{
+      font-size: 3.2em;
+      font-weight: 800;
+      padding-top: 2em;
+    }
+    </style>
+{% endblock head %}
+	
+
+{% block main %}
+<div class="imgLoader"></div>
+<div class="heading">
+        <h1>Gallery . . .</h1>
+    </div>
+<div class="container container-s">
+  <div class="book">
+    <div class="gap"></div>
+      <div class="pages neon-title">
+        <div class="page text1"></div>
+        <div class="page text1"></div>
+        <div class="page text1"></div>
+        <div class="page text1"></div>
+        <div class="page text1"></div>
+        <div class="page text1"></div>
+      </div>
+      <div class="flips">
+        <div class="flip flip1">
+          <div class="flip flip2">
+            <div class="flip flip3">
+              <div class="flip flip4">
+                <div class="flip flip5">
+                  <div class="flip flip6">
+                    <div class="flip flip7 ">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock main %}
+	
+{% block scripts %}
+	<!-- <script type="module" src="{% static 'js/alumination_logo.js' %}"></script>
+	<script type="module" src="{% static 'js/alumination_background.js' %}"></script> -->
+{% endblock scripts %}

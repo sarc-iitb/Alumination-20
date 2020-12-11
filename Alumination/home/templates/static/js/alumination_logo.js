@@ -13,18 +13,18 @@ animate();
 function init(){
     scene = new THREE.Scene();
     camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.1, 10000);
-    camera.position.set( 0, 50, 700 );
+    camera.position.set( 0, 50, 600 );
     camera.panSpeed = 4;
 
-    const pointLight = new THREE.PointLight( 0xffffff, 0.8 );
+    const pointLight = new THREE.PointLight( 0xffffff, 2 );
     camera.add( pointLight );
 
     const helper = new THREE.GridHelper( 1200, 60, 0xFF4444, 0x404040 );
     // scene.add( helper );
 
-    const ambientLight = new THREE.AmbientLight( 0xffffff, 1000 );
-    const dirlight1 = new THREE.DirectionalLight(0xffffff,0.5);
-    const dirlight2 = new THREE.DirectionalLight(0xffffff,0.5);
+    const ambientLight = new THREE.AmbientLight( 0xff0000, 1000 );
+    const dirlight1 = new THREE.DirectionalLight(0xff0000,500);
+    const dirlight2 = new THREE.DirectionalLight(0xff0000,0.5);
     scene.add( ambientLight );
     scene.add(dirlight1);
     scene.add(dirlight2);
@@ -37,11 +37,11 @@ function init(){
     document.createElement('div',{classList: ["container"], id: "logo_container"})
     document.getElementById("logo_container").appendChild(renderer.domElement);
 
-    controls = new OrbitControls(camera,renderer.domElement);
-    controls.maxDistance = 900;
-    controls.minDistance = 300;
-    controls.maxAzimuthAngle = Math.PI/6;
-    controls.minAzimuthAngle = -Math.PI/6;
+    // controls = new OrbitControls(camera,renderer.domElement);
+    // controls.maxDistance = 900;
+    // controls.minDistance = 300;
+    // controls.maxAzimuthAngle = Math.PI/6;
+    // controls.minAzimuthAngle = -Math.PI/6;
     // controls.maxPolarAngle = -Math.PI/2;
     // controls.minPolarAngle = -Math.PI/2;
 }
@@ -65,7 +65,7 @@ function loadLogo(objectPath){
 
 function animate() {
     requestAnimationFrame(animate);
-    controls.update();
+    // controls.update();
     camera.updateProjectionMatrix();
     render();
 }

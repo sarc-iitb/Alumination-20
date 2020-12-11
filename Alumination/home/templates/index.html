@@ -54,7 +54,6 @@
 			left: 0px;
 			right: 0px;
 			/* font-size: 12px; */
-			{% comment %} color: rgba(127, 255, 255, 0.75); {% endcomment %}
 		}
 
 		button {
@@ -151,19 +150,19 @@
 		}
 		body{
 			background: whitesmoke;
+			overflow-x: hidden !important;
 		}
 		/* .about h1{
 
 		} */
-		
 	</style>
 {% endblock head %}
 	
 
 {% block main %}
 		<div class="three-js-wrapper" style="background: whitesmoke;">
-			<div class="containerd" id="back_container"></div>
 			{% comment %} <div class="containerd" id="logo_container"></div> {% endcomment %}
+			<div class="containerd" id="back_container"></div>
 			<div class="dummy"></div>
 		</div>
 		<div class="about-us">

@@ -1,2 +1,268 @@
 {% extends "nav.html" %}
 {% load static %}
+
+{% block head %}
+    <title>Contacts</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/Mitali_contacts.css' %}">
+    <style type="text/css">
+        .demo{
+            margin-top: -217px;
+            width: 100%;
+        }
+        body{
+            background: whitesmoke;
+        }
+        .img-responsive{
+            width: 100%;
+        }
+		@media only screen and (max-width: 766px){
+			.demo{
+				width: 100%;
+                height: 100%;
+			}
+		}
+        .heading h1{
+            text-align: center;
+            font-size: 3.2em;
+            font-weight: 800;
+            padding-top: 2em;
+        }
+    </style>
+{% endblock head %}
+
+{% block main %}
+    <section class="container">
+        <div class="heading">
+            <h1>Contacts . . .</h1>
+        </div>
+        <div class="page-header">
+                </div>
+        <div class="row active-with-click">
+    
+
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <article class="material-card Grey">
+                    <h2>
+                        <span>Monali Dambre</span>
+                        <strong>
+                            <i class="fa fa-fw fa-star"></i>
+                            Events Core Team Member
+                        </strong>
+                    </h2>
+                    <div class="mc-content">
+                        <div class="img-container">
+                            <img class="img-responsive" src="{% static 'Contacts/Monali_Dambre.jpg' %}">
+                        </div>
+                        <div class="mc-description">
+                        <img src="{% static 'Cards/Back.svg' %}" class="demo">
+                        </div>
+                    </div>
+                    <a class="mc-btn-action">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                    <div class="mc-footer">
+                        <h4>
+                            Social
+                        </h4>
+                        <a class="fa fa-fw fa-facebook"></a>
+                        <a class="fa fa-fw fa-twitter"></a>
+                        <a class="fa fa-fw fa-linkedin"></a>
+                        <a class="fa fa-fw fa-google-plus"></a>
+                    </div>
+                </article>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <article class="material-card Grey">
+                    <h2>
+                        <span>Aishwarya Singh</span>
+                        <strong>
+                            <i class="fa fa-fw fa-star"></i> 
+                            Events Core Team Member
+                        </strong>
+                    </h2>
+                    <div class="mc-content">
+                        <div class="img-container">
+                            <img class="img-responsive" src="{% static 'Contacts/Aishwarya_Singh.jpg' %}">
+                        </div>
+                        <div class="mc-description">
+                        <img src="{% static 'Cards/Back.svg' %}" class="demo">
+                        </div>
+                    </div>
+                    <a class="mc-btn-action">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                    <div class="mc-footer">
+                        <h4>
+                            Social
+                        </h4>
+                        <a class="fa fa-fw fa-facebook"></a>
+                        <a class="fa fa-fw fa-twitter"></a>
+                        <a class="fa fa-fw fa-linkedin"></a>
+                        <a class="fa fa-fw fa-google-plus"></a>
+                    </div>
+                </article>
+            </div>
+    <div class="col-md-4 col-sm-6 col-xs-12">
+                <article class="material-card Grey">
+                    <h2>
+                        <span>Laxmi Thawkar</span>
+                        <strong>
+                            <i class="fa fa-fw fa-star"></i>  
+                            ASMP Core Team Member
+                        </strong>
+                    </h2>
+                    <div class="mc-content">
+                        <div class="img-container">
+                            <img class="img-responsive" src="{% static 'Contacts/Laxmi_Thawkar.jpg' %}">
+                        </div>
+                        <div class="mc-description">
+                        <img src="{% static 'Cards/Back.svg' %}" class="demo">
+                        </div>
+                    </div>
+                    <a class="mc-btn-action">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                    <div class="mc-footer">
+                        <h4>
+                            Social
+                        </h4>
+                        <a class="fa fa-fw fa-facebook"></a>
+                        <a class="fa fa-fw fa-twitter"></a>
+                        <a class="fa fa-fw fa-linkedin"></a>
+                        <a class="fa fa-fw fa-google-plus"></a>
+                    </div>
+                </article>
+            </div>
+    {% comment %} <div class="col-md-4 col-sm-6 col-xs-12">
+                <article class="material-card Grey">
+                    <h2>
+                        <span>Steve Mcqueen</span>
+                        <strong>
+                            <i class="fa fa-fw fa-star"></i>
+                            Papillon
+                        </strong>
+                    </h2>
+                    <div class="mc-content">
+                        <div class="img-container">
+                            <img class="img-responsive" src="{% static 'Contacts/Monali_Dambre.jpg' %}">
+                        </div>
+                        <div class="mc-description">
+                        <img src="{% static 'Cards/Back.svg' %}" class="demo">
+                        </div>
+                    </div>
+                    <a class="mc-btn-action">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                    <div class="mc-footer">
+                        <h4>
+                            Social
+                        </h4>
+                        <a class="fa fa-fw fa-facebook"></a>
+                        <a class="fa fa-fw fa-twitter"></a>
+                        <a class="fa fa-fw fa-linkedin"></a>
+                        <a class="fa fa-fw fa-google-plus"></a>
+                    </div>
+                </article>
+            </div>
+    <div class="col-md-4 col-sm-6 col-xs-12">
+                <article class="material-card Grey">
+                    <h2>
+                        <span>Steve Mcqueen</span>
+                        <strong>
+                            <i class="fa fa-fw fa-star"></i>
+                            Papillon
+                        </strong>
+                    </h2>
+                    <div class="mc-content">
+                        <div class="img-container">
+                            <img class="img-responsive" src="{% static 'Contacts/Monali_Dambre.jpg' %}">
+                        </div>
+                        <div class="mc-description">
+                        <img src="{% static 'Cards/Back.svg' %}" class="demo">
+                        </div>
+                    </div>
+                    <a class="mc-btn-action">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                    <div class="mc-footer">
+                        <h4>
+                            Social
+                        </h4>
+                        <a class="fa fa-fw fa-facebook"></a>
+                        <a class="fa fa-fw fa-twitter"></a>
+                        <a class="fa fa-fw fa-linkedin"></a>
+                        <a class="fa fa-fw fa-google-plus"></a>
+                    </div>
+                </article>
+            </div>
+    <div class="col-md-4 col-sm-6 col-xs-12">
+                <article class="material-card Grey">
+                    <h2>
+                        <span>Steve Mcqueen</span>
+                        <strong>
+                            <i class="fa fa-fw fa-star"></i>
+                            Papillon
+                        </strong>
+                    </h2>
+                    <div class="mc-content">
+                        <div class="img-container">
+                            <img class="img-responsive" src="{% static 'Contacts/Monali_Dambre.jpg' %}">
+                        </div>
+                        <div class="mc-description">
+                        <img src="{% static 'Cards/Back.svg' %}" class="demo">
+                        </div>
+                    </div>
+                    <a class="mc-btn-action">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                    <div class="mc-footer">
+                        <h4>
+                            Social
+                        </h4>
+                        <a class="fa fa-fw fa-facebook"></a>
+                        <a class="fa fa-fw fa-twitter"></a>
+                        <a class="fa fa-fw fa-linkedin"></a>
+                        <a class="fa fa-fw fa-google-plus"></a>
+                    </div>
+                </article>
+            </div> {% endcomment %}
+
+        </div>
+    </section>
+{% endblock main %}
+
+{% block scripts %}
+    <script>
+    $(function() {
+            $('.material-card > .mc-btn-action').click(function () {
+                var card = $(this).parent('.material-card');
+                var icon = $(this).children('i');
+                icon.addClass('fa-spin-fast');
+
+                if (card.hasClass('mc-active')) {
+                    card.removeClass('mc-active');
+
+                    window.setTimeout(function() {
+                        icon
+                            .removeClass('fa-arrow-left')
+                            .removeClass('fa-spin-fast')
+                            .addClass('fa-bars');
+
+                    }, 800);
+                } else {
+                    card.addClass('mc-active');
+
+                    window.setTimeout(function() {
+                        icon
+                            .removeClass('fa-bars')
+                            .removeClass('fa-spin-fast')
+                            .addClass('fa-arrow-left');
+
+                    }, 800);
+                }
+            });
+        });
+    </script>
+{% endblock scripts %}

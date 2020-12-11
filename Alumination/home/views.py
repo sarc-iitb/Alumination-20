@@ -9,7 +9,7 @@ def register(request):
     return render(request,'register.html',{})
 
 def schedule(request):
-    return render(request,'schedule.html',{})
+    return render(request,'schedule2.html',{})
 
 
 def gallery(request):

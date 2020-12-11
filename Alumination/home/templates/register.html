@@ -23,11 +23,11 @@
             width: 100%;
         }
         .heading h1{
-            font-size: 5em;
+            font-size: 3em;
             font-weight: bold;
             margin-top: 4%;
         }
-        
+
   </style>
 {% endblock head %}
 {% block main %}
@@ -132,18 +132,18 @@
 
     </script>
     <script type="text/javascript">
-    $(".cont .card-cont").mouseenter((e)=>{
+    $(".card").mouseenter((e)=>{
         console.log(e.currentTarget);
 
         // e.currentTarget
-        let element = e.currentTarget.childNodes[1];
+        let element = e.currentTarget;
         // console.log(element);
         element.style['transform'] = 'rotatey(-360deg)';
         element.style['-webkit-transform'] = 'rotatey(-360deg)';
         element.style.boxShadow = "0 30px 30px #ccc";
         // element.
     }).mouseleave((e)=>{
-        let element = e.currentTarget.childNodes[1];
+        let element = e.currentTarget;
         // console.log(element);
         element.style['transform'] = 'rotatey(360deg)';
         element.style['-webkit-transform'] = 'rotatey(360deg)';
@@ -162,6 +162,7 @@
         // $(".img").each(function() {
         //     $(this).after('<p class="alt" onclick="openform()" >' + $(this).attr('alt') + '</p>');
         // })
+        $(".img").click(openform);
     </script>
 {% endblock scripts %}
     
