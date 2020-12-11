@@ -2,13 +2,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 70vh;
+    margin-top: 5%;
     margin-left: 10%;
   }
-  .cont .card-cont:hover .card {
-    transform: rotatey(-360deg) translatey(-20px);
+  /* .cont .card-cont:hover .card {
+    transform: rotatey(-360deg);
     box-shadow: 0 30px 30px #ccc;
-  }
+  } */
   .cont .card {
     width: 205px;
     height: 300px;
@@ -81,7 +81,7 @@
     background-color: #0a1325;
   }
   .cont .card button:hover::after {
-    transform: scale(1.5, 1.8);
+    transform: scale(1.5, 1.5);
     opacity: 0;
   }
   /* The Overlay (background) */

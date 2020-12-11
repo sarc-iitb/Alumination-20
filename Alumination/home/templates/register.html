@@ -19,6 +19,15 @@
             text-align: center;
             align-items: center;        
         }
+        .back img{
+            width: 100%;
+        }
+        .heading h1{
+            font-size: 5em;
+            font-weight: bold;
+            margin-top: 4%;
+        }
+        
   </style>
 {% endblock head %}
 {% block main %}
@@ -28,38 +37,38 @@
     <div class="cont row">
         <div class="card-cont col-xs-8 col-md-4">
             <div class="card">
-            <div class="front">
-                <div class="img-cont">
-                    <img src="{% static 'Cards/K.svg' %}" class="img" alt="Click Here to Register for Workshops">
-                </div>   
-            </div>
-            <div class="back">
-                <img src="{% static 'Cards/Back.svg' %}" alt="">
-            </div>
-            </div>
-        </div>
-        <div class="card-cont col-xs-8 col-md-4">
-            <div class="card">
-            <div class="front">
-                <div class="img-cont" >
-                    <img src="{% static 'Cards/Q.svg' %}" class="img" alt="Click Here to Register for Beyond the Horizons">
+                <div class="front">
+                    <div class="img-cont">
+                        <img src="{% static 'Cards/K.svg' %}" class="img" alt="Click Here to Register for Workshops">
+                    </div>   
+                </div>
+                <div class="back">
+                    <img src="{% static 'Cards/Back.svg' %}" alt="">
                 </div>
             </div>
-            <div class="back">
-                <img src="{% static 'Cards/Back.svg' %}" alt="">
-            </div>
+        </div>
+        <div class="card-cont col-xs-8 col-md-4">
+            <div class="card">
+                <div class="front">
+                    <div class="img-cont" >
+                        <img src="{% static 'Cards/Q.svg' %}" class="img" alt="Click Here to Register for Beyond the Horizons">
+                    </div>
+                </div>
+                <div class="back">
+                    <img src="{% static 'Cards/Back.svg' %}" alt="">
+                </div>
             </div>
         </div>
         <div class="card-cont col-xs-8 col-md-4">
             <div class="card">
-            <div class="front">
-                <div class="img-cont" >
-                    <img src="{% static 'Cards/J.svg' %}" class="img" alt="Click Here to Register for Speed and Group Mentoring">
-                </div>   
-            </div>
-            <div class="back">
-                <img src="{% static 'Cards/Back.svg' %}" alt="">
-            </div>
+                <div class="front">
+                    <div class="img-cont" >
+                        <img src="{% static 'Cards/J.svg' %}" class="img" alt="Click Here to Register for Speed and Group Mentoring">
+                    </div>   
+                </div>
+                <div class="back">
+                    <img src="{% static 'Cards/Back.svg' %}" alt="">
+                </div>
             </div>
         </div>
     </div>
@@ -110,45 +119,49 @@
     
 {% block scripts %}
     <script type="text/javascript">
-            //function on() {
-        //document.getElementById("overlay").style.width = "100%";
-        //document.getElementById("overlay").style.display = "block";
-            
-        
-        //}
-        //$(document).ready(function(){
-        //$( ".alt-wrap" ).click(function() {
-        //$( "#overlay" ).slideDown("slow")
-            //});
-        //});
         /* Open when someone clicks on the span element */
         function openform() {
-        document.getElementById("myform").style.width = "100%";
+            document.getElementById("myform").style.width = "100%";
         }
 
         /* Close when someone clicks on the "x" symbol inside the overlay */
         function closeform() {
-        document.getElementById("myform").style.width = "0%";
+            document.getElementById("myform").style.width = "0%";
         }
 
 
-            </script>
-            <script type="text/javascript">
-            // Wrap every .img in a div
+    </script>
+    <script type="text/javascript">
+    $(".cont .card-cont").mouseenter((e)=>{
+        console.log(e.currentTarget);
+
+        // e.currentTarget
+        let element = e.currentTarget.childNodes[1];
+        // console.log(element);
+        element.style['transform'] = 'rotatey(-360deg)';
+        element.style['-webkit-transform'] = 'rotatey(-360deg)';
+        element.style.boxShadow = "0 30px 30px #ccc";
+        // element.
+    }).mouseleave((e)=>{
+        let element = e.currentTarget.childNodes[1];
+        // console.log(element);
+        element.style['transform'] = 'rotatey(360deg)';
+        element.style['-webkit-transform'] = 'rotatey(360deg)';
+        element.style.boxShadow = "0 0 0 #ccc";
+    });
+        // Wrap every .img in a div
         // 1. For all items with class .img...
         // 2. Wrap them in a div
-        $(".img").wrap('<div class="alt-wrap" />');
+        // $(".img").wrap('<div class="alt-wrap" />');
 
         // Add alt text after each .img
         // 1. For all items with class .img...
         // 2. Run a function for each of them...
         // 3. To add a p element after it
         // 5. Containing that element's alt text
-        $(".img").each(function() {
-            $(this).after('<p class="alt" onclick="openform()" >' + $(this).attr('alt') + '</p>');
-        })
-
-        // CSS shows/hides the alt text on hover
+        // $(".img").each(function() {
+        //     $(this).after('<p class="alt" onclick="openform()" >' + $(this).attr('alt') + '</p>');
+        // })
     </script>
 {% endblock scripts %}
     

@@ -21,6 +21,6 @@ urlpatterns = [
     path('',views.index,name="home"),
     path('register',views.register,name="register"),
     path('schedule',views.schedule,name="schedule"),
-    path('gallery',views.schedule,name="gallery"),
-    path('contacts',views.schedule,name="contacts"),
+    path('gallery',views.gallery,name="gallery"),
+    path('contacts',views.contacts,name="contacts"),
 ]
