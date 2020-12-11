@@ -1,13 +1,24 @@
+{% extends "nav.html" %}
 {% load static %}
-<!DOCTYPE html>
-<html>
 
-<head>
+{% block head %}
 	<title>Alumination</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-	<link type="text/css" rel="stylesheet" href="{% static 'main.css' %}" >
 	<style>
+		@font-face {
+			font-family: grodna;
+			src: url("/static/Grodna-Demo.otf");
+		}
+		* {
+			font-family: grodna !important;
+		}
+		body{
+			background-color: black; 
+			overflow: scroll;
+			scroll-behavior: smooth;
+			scrollbar-face-color: aliceblue;
+		}
 		a {
 			color: #8ff;
 		}
@@ -35,32 +46,15 @@
 			border: 1px solid rgba(127, 255, 255, 0.75);
 		}
 
-		.element .number {
-			position: absolute;
-			top: 20px;
-			right: 20px;
-			font-size: 12px;
-			color: rgba(127, 255, 255, 0.75);
-		}
 
-		.element .symbol {
-			position: absolute;
-			top: 40px;
+		.element .front_image {
+			/* position: absolute; */
+			/* bottom: 15px; */
+			width: 100%;
 			left: 0px;
 			right: 0px;
-			font-size: 60px;
-			font-weight: bold;
-			color: rgba(255, 255, 255, 0.75);
-			text-shadow: 0 0 10px rgba(0, 255, 255, 0.95);
-		}
-
-		.element .details {
-			position: absolute;
-			bottom: 15px;
-			left: 0px;
-			right: 0px;
-			font-size: 12px;
-			color: rgba(127, 255, 255, 0.75);
+			/* font-size: 12px; */
+			{% comment %} color: rgba(127, 255, 255, 0.75); {% endcomment %}
 		}
 
 		button {
@@ -80,69 +74,107 @@
 			color: #000000;
 			background-color: rgba(0, 255, 255, 0.75);
 		}
-		.container{
+
+		.containerd {
 			position: absolute;
 			width: 80% !important;
 			/* overflow: visible !important; */
 		}
-		#logo_container{
+
+		#logo_container {
 			left: 5% !important;
 
 			/* overflow: visible !important; */
 			/* bottom: 10%; */
 		}
-		canvas{
+
+		canvas {
 			width: 90vw !important;
 		}
-		.three-js-wrapper{
+
+		.three-js-wrapper {
+			position: relative;
+			width: 90vw;
+			margin: auto;
+		}
+
+		.demo-wrapper {
 			position: relative;
 		}
-		.demo-wrapper{
-			position: relative;
-		}
-		.dummy{
+
+		.dummy {
 			height: 100vh;
 		}
-		.dummy_nav{
+
+		.dummy_nav {
 			height: 100px;
 		}
-		img{
+
+		img {
 			position: absolute;
-			filter: drop-shadow(0,0,12px,white);
+			filter: drop-shadow(0, 0, 12px, white);
 		}
-		#blurred{
+
+		#blurred {
 			filter: blur(12px) brightness(100%);
 		}
-		.alumination_logo_svg{
+
+		.alumination_logo_svg {
 			margin: 2% auto 2% auto;
 			align-items: center;
 			width: 10%;
 			position: relative;
 			display: block;
 		}
+		.alumination_logo_svg img{
+			width: 100%;
+		}
+		.contains {
+			{% comment %} height: 100vh; {% endcomment %}
+			/* position: relative; */
+			/* border: 3px solid green;  */
+		}
+
+		.center {
+			position: relative;
+			vertical-align: middle;
+			width: 100%;
+		}
+		h1{
+			font-size: 2.2em;
+		}
+		.about{
+			color: #315969;
+			margin: 5%;
+			font-size: 1.7em;
+			line-height: 120%;
+		}
+		body{
+			background: whitesmoke;
+		}
+		/* .about h1{
+
+		} */
+		
 	</style>
-</head>
+{% endblock head %}
+	
 
-<body>
-
-	<div class="alumination_logo_svg">
-		{% comment %} <img src="./../../LOGOS/RED Dates.svg"/>
-		<img id="blurred" src="./../../LOGOS/WHITE.svg"/>	 {% endcomment %}
-		<div class="dummy_nav"></div>
-	</div>
-	<div class="three-js-wrapper">
-		<div class="container" id="back_container"></div>	
-		<div class="container" id="logo_container"></div>
-		<div class="dummy"></div>
-	</div>
-	{% comment %} <div class="youtube">
-		<div id="youtube_container"></div>
-		<div id="blocker"></div>
-	</div> {% endcomment %}
-
-	<script type="module" src="{% static 'alumination_logo.js' %}"></script>
-	<script type="module" src="{% static 'alumination_background.js' %}"></script>
-	<script type="module" src="{% static 'alumination_youtube.js' %}"></script>
-</body>
-
-</html>
+{% block main %}
+		<div class="three-js-wrapper" style="background: whitesmoke;">
+			<div class="containerd" id="back_container"></div>
+			{% comment %} <div class="containerd" id="logo_container"></div> {% endcomment %}
+			<div class="dummy"></div>
+		</div>
+		<div class="about-us">
+			<div class="about">
+				<h1 class="about-head">About Alumination</h1>
+				<p class="about-content">Alumination, the flagship event of SARC sparkles brilliantly, intricately embedded on its tiara. The most opportune and the much-coveted two-day fest serves as an expedient medium to promote conducive student-alumni interactions and provide deep foresight into your malleable future. Under the guiding roof of the accomplished alumni inside SARC’s dojo, exploit the opportunity to get enlightened on a spectrum of topics spanning Career guidance, Corporate exposure, Life Learning, and Motivational Talks.</p>
+			</div>
+		</div>
+{% endblock main %}
+	
+{% block scripts %}
+	<script type="module" src="{% static 'js/alumination_logo.js' %}"></script>
+	<script type="module" src="{% static 'js/alumination_background.js' %}"></script>
+{% endblock scripts %}

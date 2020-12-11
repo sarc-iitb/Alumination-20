@@ -1,7 +1,7 @@
-import * as THREE from './three.js/build/three.module.js';
-import { TrackballControls } from './three.js/examples/jsm/controls/TrackballControls.js';
-import { OrbitControls } from './three.js/examples/jsm/controls/OrbitControls.js';
-import {OBJLoader2} from './three.js/examples/jsm/loaders/OBJLoader2.js';
+import * as THREE from '../three.js/build/three.module.js';
+import { TrackballControls } from '../three.js/examples/jsm/controls/TrackballControls.js';
+import { OrbitControls } from '../three.js/examples/jsm/controls/OrbitControls.js';
+import {OBJLoader2} from '../three.js/examples/jsm/loaders/OBJLoader2.js';
 
 THREE.Cache.enabled = true;
 const objectPath = "3d alumination.obj",
@@ -38,6 +38,12 @@ function init(){
     document.getElementById("logo_container").appendChild(renderer.domElement);
 
     controls = new OrbitControls(camera,renderer.domElement);
+    controls.maxDistance = 900;
+    controls.minDistance = 300;
+    controls.maxAzimuthAngle = Math.PI/6;
+    controls.minAzimuthAngle = -Math.PI/6;
+    // controls.maxPolarAngle = -Math.PI/2;
+    // controls.minPolarAngle = -Math.PI/2;
 }
 
 // function onMouseOver

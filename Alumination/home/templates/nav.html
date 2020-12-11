@@ -1,0 +1,422 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link type="text/css" rel="stylesheet" href="{% static 'css/base_sachin.css' %}">
+	<link type="text/css" rel="stylesheet" href="{% static 'css/demo1.css' %}">
+	<link type="text/css" rel="stylesheet" href="{% static 'css/demo2.css' %}">
+    <link type="text/css" rel="stylesheet" href="{% static 'css/check.css' %}">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+ 	<link href="https://unpkg.com/webkul-micron@1.1.6/dist/css/micron.min.css" type="text/css" rel="stylesheet">
+    <script src="https://unpkg.com/webkul-micron@1.1.6/dist/script/micron.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    
+    <title>ALUMINATION</title>
+    <style>
+		@font-face {
+			font-family: grodna;
+			src: url("/static/Grodna-Demo.otf");
+		}
+		* {
+			font-family: grodna !important;
+		}
+
+		#menu {
+			position: absolute;
+			bottom: 20px;
+			width: 100%;
+			text-align: center;
+		}
+		.center {
+			position: relative;
+			vertical-align: middle;
+			width: 100%;
+		}
+		.about{
+			color: whitesmoke;
+			margin: 5%;
+			font-size: 2.2em;
+			line-height: 120%;
+		}
+
+		.dummy {
+			height: 100vh;
+		}
+
+		.dummy_nav {
+			height: 100px;
+		}
+
+		img {
+			position: absolute;
+			filter: drop-shadow(0, 0, 12px, white);
+		}
+
+		#blurred {
+			filter: blur(12px) brightness(100%);
+		}
+
+		.alumination_logo_svg {
+			margin: 2% auto 2% auto;
+			align-items: center;
+			width: 10%;
+			position: relative;
+			display: block;
+		}
+		.alumination_logo_svg img{
+			width: 100%;
+		}
+    </style>
+    {% block head %}{% endblock head %}
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>document.documentElement.className = "js"; var supportsCssVars = function () { var e, t = document.createElement("style"); return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e }; supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
+
+</head>
+<body style="overflow: hidden;">	
+    <div class="center contains">
+		<div id="alumination_loader_sreyashi" style="position: absolute;">
+			<img id='blurred' src="{% static 'LOGOS/RED Dates.svg' %}">
+			<img id='blurred1' src="{% static 'LOGOS/RED.svg' %}">
+			<img id='blurred2' src="{% static 'LOGOS/WHITE Dates.svg' %} ">
+		</div>
+    </div>
+    <main style="visibility: hidden">
+		<div class="navbar-container container" id="navbarVSV">
+			<ul class="nav">
+				<li class="nav-item">
+					<a href="{% url 'home' %}" class="nav-link active-link">About
+					</a>
+					<div class="underline"></div>
+				</li>
+				<li class="nav-item">
+					<a href="{% url 'schedule' %}" class="nav-link">Events</a>
+					<div class="underline"></div>
+				</li>
+				<li class="nav-item">
+					<a href="{% url 'schedule' %}" class="nav-link">Schedule</a>
+					<div class="underline"></div>
+				</li>
+				<li class="nav-item">
+					<a href="{% url 'home' %}" class="nav-link"><img src="{% static 'LOGOS/RED.svg' %}" id="mark"></a><br>
+					
+				</li>
+				<li class="nav-item">
+					<a href="{% url 'register' %}" class="nav-link">Register</a>
+					<div class="underline"></div>
+				</li>
+				<li class="nav-item">
+					<a href="{% url 'contacts' %}" class="nav-link">Contact Us</a>
+					<div class="underline"></div>
+				</li>
+				<li class="nav-item">
+					<a href="{% url 'gallery' %}" class="nav-link">Gallery</a>
+					<div class="underline"></div>
+				</li>
+			</ul>
+		</div>
+		<div class="hamburger hamburger--emphatic" id="hamburgerVivek">
+			<div class="hamburger-box">
+				<div class="hamburger-inner"></div>
+			</div>
+		</div>
+		<div class="overlay navbar-container">
+			<ul id="listVSV">
+				<img src="{% static 'img/base/alumination logo.svg' %}" id="aluminationLogo-overlay"></a>
+				<li class="nav-link active-link">
+					<a href="{% url 'home' %}">Home</a>
+					<div class="underline"></div>
+				</li>
+				<li class="nav-link">
+					<a href="{% url 'home' %}">About</a>
+					<div class="underline"></div>
+				</li>
+				<li class="nav-link">
+					<a href="{% url 'schedule' %}">Events</a>
+					<div class="underline"></div>
+				</li>
+				<li class="nav-link">
+					<a href="{% url 'schedule' %}">Schedule</a>
+					<div class="underline"></div>
+				</li>
+				<li class="nav-link">
+					<a href="{% url 'gallery' %}">Gallery</a>
+					<div class="underline"></div>
+				</li>
+				<li class="nav-link">
+					<a href="{% url 'register' %}">Register</a>
+					<div class="underline"></div>
+				</li>
+				<li class="nav-link">
+					<a href="{% url 'contacts' %}">Contact Us</a>
+					<div class="underline"></div>
+				</li>
+			</ul>
+			<img src="" id="overlayImage">
+		</div>
+		<a href="{% url 'home' %}">
+			<img src="{% static 'LOGOS/RED.svg' %}" id="aluminationLogo">
+			<div class="alumination_logo_svg" id="aluminationLogo">
+				<img src="{% static 'LOGOS/RED Dates.svg' %}">
+				<img src="{% static 'LOGOS/WHITE.svg' %}">	
+				<div class="dummy_nav"></div>
+			</div>
+		</a>
+		{% comment %} </div> {% endcomment %}
+        {% block main %}{% endblock main %}
+        <nav class="grim">
+            <div class="grim__item">
+                <div class="grim__item-bg grim__item-bg--1"></div>
+            </div>
+            <div class="grim__item">
+                <div class="grim__item-bg grim__item-bg--2"></div>
+            </div>
+            <div class="grim__item">
+                <div class="grim__item-bg grim__item-bg--3"></div>
+                <div class="grim__item-content">
+                    <div class="grim__item-inner">
+                        <button class="menu-trigger menu-trigger--close">- Close</button>
+                    </div>
+                </div>
+            </div>
+            <div class="grim__item">
+                <div class="grim__item-bg grim__item-bg--4"></div>
+            </div>
+            <div class="grim__item">
+                <div class="grim__item-bg grim__item-bg--5"></div>
+                <a href="https://alumination.sarc-iitb.org/about/" class="grim__link grim__item-content">
+                    <div class="grim__item-inner">
+                        <h3 class="grim__item-title">About</h3>
+                    </div>
+                </a>
+            </div>
+            <div class="grim__item">
+                <div class="grim__item-bg grim__item-bg--6"></div>
+                <a href="https://alumination.sarc-iitb.org/events/" class="grim__link grim__item-content">
+                    <div class="grim__item-inner">
+                        <h3 class="grim__item-title">Events</h3>
+                        <span class="grim__item-desc">One place for all.</span>
+                    </div>
+                </a>
+            </div>
+            <div class="grim__item">
+                <div class="grim__item-bg grim__item-bg--7"></div>
+                <a href="#content-3" class="grim__link grim__item-content">
+                    <div class="grim__item-inner">
+                        <h3 class="grim__item-title">Register</h3>
+                        <span class="grim__item-desc">Find out who supports us.</span>
+                    </div>
+                </a>
+            </div>
+            <div class="grim__item">
+                <div class="grim__item-bg grim__item-bg--8"></div>
+                <a href="https://www.youtube.com/" class="grim__link grim__item-content">
+                    <div class="grim__item-inner">
+                        <h3 class="grim__item-title">Contact Us</h3>
+                        <span class="grim__item-desc">Get the right ticket</span>
+                    </div>
+                </a>
+            </div>
+            <div class="grim__item">
+                <div class="grim__item-bg grim__item-bg--9"></div>
+                <a href="#content-4" class="grim__link grim__item-content">
+                    <div class="grim__item-inner">
+                        <h3 class="grim__item-title">Gallery</h3>
+                        <span class="grim__item-desc">Smart people. All in one place.</span>
+                    </div>
+                </a>
+            </div>
+            <div class="grim__item">
+                <div class="grim__item-bg grim__item-bg--10" data-duration="1000" data-easing="easeOutQuint"></div>
+                <a href="#content-6" class="grim__link grim__item-content">
+                    <div class="grim__item-inner">
+                        <h3 class="grim__item-title">schedule</h3>
+                        <span class="grim__item-desc">When the time is right, you'll learn.</span>
+                    </div>
+                </a>
+            </div>
+        </nav>
+    </main>
+    
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+	<script type="text/javascript" src="{% static 'js/base.js' %}"></script>
+	<script>
+
+		var forEach=function(t,o,r){if("[object Object]"===Object.prototype.toString.call(t))for(var c in t)Object.prototype.hasOwnProperty.call(t,c)&&o.call(r,t[c],c,t);else for(var e=0,l=t.length;l>e;e++)o.call(r,t[e],e,t)};
+
+		var hamburgers = document.querySelectorAll(".hamburger");
+		if (hamburgers.length > 0) {
+		forEach(hamburgers, function(hamburger) {
+			hamburger.addEventListener("click", function() {
+			this.classList.toggle("is-active");
+			}, false);
+		});
+		}
+ 	</script>
+	<script src="{% static 'js/demo.js' %}"></script>
+	<script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
+    <script>
+		$(window).on('load', function (e) {	
+			$('#alumination_loader_sreyashi').fadeOut(4000);
+			setTimeout(()=> {
+				$("main")[0].style.display = "block";
+				$("main")[0].style.visibility = "visible";
+				$("body")[0].style.overflow = "scroll";}, 
+			4000);
+		})
+	</script>
+	<script>
+		class Box {
+			constructor(el, pos) {
+				this.DOM = { el: el };
+				this.DOM.bg = this.DOM.el.querySelector('.grim__item-bg');
+				this.DOM.inner = this.DOM.el.querySelector('.grim__item-content > .grim__item-inner');
+				this.DOM.link = this.DOM.el.querySelector('a.grim__link');
+				this.pos = pos;
+			}
+			open() {
+				return new Promise((resolve, reject) => {
+					this.DOM.bg.style.transformOrigin = this.pos % 2 === 0 ? '50% 100%' : '0% 50%';
+
+					anime.remove(this.DOM.bg);
+					anime({
+						targets: this.DOM.bg,
+						duration: this.DOM.bg.dataset.duration || 30 + this.pos * 20, // increment as more boxes get revealed..
+						easing: this.DOM.bg.dataset.easing || 'easeInOutQuad',
+						opacity: {
+							value: 1,
+							duration: 1
+						},
+						scaleY: this.pos % 2 === 0 ? [0, 1] : 1,
+						scaleX: Math.abs(this.pos % 2) == 1 ? [0, 1] : 1,
+						complete: resolve
+					});
+
+					if (this.DOM.inner) {
+						anime.remove(this.DOM.inner);
+						anime({
+							targets: this.DOM.inner,
+							duration: 1300,
+							delay: 550,
+							easing: 'easeOutExpo',
+							opacity: {
+								value: 1,
+								duration: 1
+							},
+							translateY: ['100%', '0%']
+						});
+					}
+				});
+			}
+			close() {
+				return new Promise((resolve, reject) => {
+					this.DOM.bg.style.transformOrigin = this.pos % 2 === 0 ? '50% 0%' : '100% 50%';
+
+					anime.remove(this.DOM.bg);
+					anime({
+						targets: this.DOM.bg,
+						duration: this.DOM.bg.dataset.duration || 10 + this.pos * 10, // increment as more boxes get revealed..
+						easing: this.DOM.bg.dataset.easing || 'easeInOutQuad',
+						opacity: {
+							value: 0,
+							delay: this.DOM.bg.dataset.duration || 10 + this.pos * 10,
+							duration: 1
+						},
+						scaleY: this.pos % 2 === 0 ? [1, 0] : 1,
+						scaleX: Math.abs(this.pos % 2) == 1 ? [1, 0] : 1,
+						complete: resolve
+					});
+
+					if (this.DOM.inner) {
+						anime.remove(this.DOM.inner);
+						anime({
+							targets: this.DOM.inner,
+							duration: 100,
+							easing: 'linear',
+							opacity: 0
+						});
+					}
+				});
+			}
+		}
+
+		class Menu {
+			constructor(el) {
+				this.DOM = { el: el };
+				this.DOM.items = Array.from(this.DOM.el.querySelectorAll('.grim__item'));
+				this.itemsTotal = this.DOM.items.length;
+				this.boxes = [];
+				this.DOM.items.forEach((item, pos) => {
+					this.boxes.push(new Box(item, pos));
+				});
+
+				this.initEvents();
+			}
+			initEvents() {
+				for (let i = 0; i < this.itemsTotal; ++i) {
+					const link = this.boxes[i].DOM.link;
+					if (link) {
+						link.addEventListener('click', (ev) => {
+							ev.preventDefault();
+							if (this.isAnimating) return;
+							document.querySelector('.content--switch-current').classList.remove('content--switch-current');
+							document.querySelector(link.getAttribute('href')).classList.add('content--switch-current');
+							this.close();
+						});
+					}
+				}
+			}
+			toggle(action) {
+				if (this.isAnimating) return;
+				this.isAnimating = true;
+				if (action === 'open') {
+					this.openBoxes();
+				}
+				else {
+					this.closeBoxes();
+				}
+			}
+			open() {
+				this.toggle('open');
+			}
+			close() {
+				this.toggle('close');
+			}
+			openBoxes(pos = 0) {
+				this.toggleBoxes('open', pos);
+			}
+			closeBoxes(pos = 0) {
+				this.toggleBoxes('close', pos);
+			}
+			toggleBoxes(action, pos) {
+				if (pos >= this.itemsTotal) {
+					this.isAnimating = false;
+					return;
+				};
+				DOM.grim.classList[action === 'open' ? 'add' : 'remove']('grim--open');
+				const box = this.boxes[pos];
+				box[action === 'open' ? 'open' : 'close']().then(() => this[action === 'open' ? 'openBoxes' : 'closeBoxes'](pos + 1));
+			}
+		}
+
+
+		let DOM = {};
+		DOM.grim = document.querySelector('.grim');
+		DOM.menu = new Menu(DOM.grim);
+		DOM.menuCtrls = {
+			open: document.querySelector('.alumination_logo_svg'),
+			close: document.querySelector('.menu-trigger--close'),
+		};
+
+		DOM.menuCtrls.open.addEventListener('click', () => DOM.menu.open());
+		DOM.menuCtrls.close.addEventListener('click', () => DOM.menu.close());
+	</script>
+    {% block scripts %}{% endblock scripts %}
+</body>
+</html>
+	

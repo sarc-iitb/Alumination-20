@@ -1,0 +1,154 @@
+{% extends "nav.html" %}
+{% load static %}
+
+{% block head %}
+    <title>Register and Contact Us</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/register.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type="text/css">
+        .register {
+            background: -webkit-linear-gradient(left, #000, #87898a);
+        }
+        .register form{
+            margin-top: 3%;
+        }
+        .form-group{
+            width: 30%;
+        }
+        .heading{
+            text-align: center;
+            align-items: center;        
+        }
+  </style>
+{% endblock head %}
+{% block main %}
+    <div class="heading">
+        <h1>Register</h1>
+    </div>
+    <div class="cont row">
+        <div class="card-cont col-xs-8 col-md-4">
+            <div class="card">
+            <div class="front">
+                <div class="img-cont">
+                    <img src="{% static 'Cards/K.svg' %}" class="img" alt="Click Here to Register for Workshops">
+                </div>   
+            </div>
+            <div class="back">
+                <img src="{% static 'Cards/Back.svg' %}" alt="">
+            </div>
+            </div>
+        </div>
+        <div class="card-cont col-xs-8 col-md-4">
+            <div class="card">
+            <div class="front">
+                <div class="img-cont" >
+                    <img src="{% static 'Cards/Q.svg' %}" class="img" alt="Click Here to Register for Beyond the Horizons">
+                </div>
+            </div>
+            <div class="back">
+                <img src="{% static 'Cards/Back.svg' %}" alt="">
+            </div>
+            </div>
+        </div>
+        <div class="card-cont col-xs-8 col-md-4">
+            <div class="card">
+            <div class="front">
+                <div class="img-cont" >
+                    <img src="{% static 'Cards/J.svg' %}" class="img" alt="Click Here to Register for Speed and Group Mentoring">
+                </div>   
+            </div>
+            <div class="back">
+                <img src="{% static 'Cards/Back.svg' %}" alt="">
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="overlay register" id="myform" style="align-content: center;">
+        <form method="post" autocomplete="off" name="google-sheet" >
+            <center>
+                <div class="form-group" >
+                    <input type="text" name="Name" class="form-control" placeholder="Name *" value="" required="" />
+                </div>
+                <div class="form-group">
+                    <input type="text" name="Roll-no" class="form-control" placeholder="Roll-no: *" value="" required="" />
+                </div>
+                <div class="form-group">
+                    <input type="text" name="Dept" class="form-control" placeholder="Department: *" value="" required="" />
+                </div>
+                <div class="form-group">
+                    <label for="yr" style="color: white;" >In which year are you studying:</label>
+                    <select class="form-control" id="yr" name="Year">
+                        <option value="--Select--">--Select--</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>  
+                    </select>
+                </div>
+                <div class="form-group">
+                    <input type="number" name="Phone" class="form-control" placeholder="Your Contact Number *" value="" required="" />
+                </div>
+                <div class="form-group">
+                    <input type="email" name="Email" class="form-control" placeholder="Your Email *" value="" required="" />
+                </div>
+                <div class="form-group">
+                    <label for="workshop" style="color: white;">Workshop Attending:</label>
+                    <select class="form-control" id="workshop" name="workshop">
+                        <option value="--Select--">--Select--</option>
+                        <option value="Analytics:20th December,2pm to 4pm">Analytics:20th December,2pm to 4pm</option>
+                        <option value="Finance:20th December,11am to 1pm">Finance:20th December,11am to 1pm</option>
+                        <option value="Product Management:19th December,10:30am to 12 noon">Product Management:19th December,10:30am to 12 noon</option>                      
+                    </select>
+                </div>
+                <button type="button" class="btn btn-success">Submit</button> 
+                <button type="button" class="btn btn-secondary" onclick="closeform()">Back</button>
+            </center>
+        </form>
+    </div>
+{% endblock main %}
+    
+{% block scripts %}
+    <script type="text/javascript">
+            //function on() {
+        //document.getElementById("overlay").style.width = "100%";
+        //document.getElementById("overlay").style.display = "block";
+            
+        
+        //}
+        //$(document).ready(function(){
+        //$( ".alt-wrap" ).click(function() {
+        //$( "#overlay" ).slideDown("slow")
+            //});
+        //});
+        /* Open when someone clicks on the span element */
+        function openform() {
+        document.getElementById("myform").style.width = "100%";
+        }
+
+        /* Close when someone clicks on the "x" symbol inside the overlay */
+        function closeform() {
+        document.getElementById("myform").style.width = "0%";
+        }
+
+
+            </script>
+            <script type="text/javascript">
+            // Wrap every .img in a div
+        // 1. For all items with class .img...
+        // 2. Wrap them in a div
+        $(".img").wrap('<div class="alt-wrap" />');
+
+        // Add alt text after each .img
+        // 1. For all items with class .img...
+        // 2. Run a function for each of them...
+        // 3. To add a p element after it
+        // 5. Containing that element's alt text
+        $(".img").each(function() {
+            $(this).after('<p class="alt" onclick="openform()" >' + $(this).attr('alt') + '</p>');
+        })
+
+        // CSS shows/hides the alt text on hover
+    </script>
+{% endblock scripts %}
+    

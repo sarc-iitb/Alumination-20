@@ -1,0 +1,150 @@
+body {
+    background-color: #222222;
+    background: repeating-linear-gradient(45deg, #2b2b2b 0%, #2b2b2b 20%, #222222 0%, #222222 50%) 0 / 15px 15px;
+  }
+  
+#alumination_loader_sreyashi {
+    width: 100%;
+    margin-left: 40%;
+    margin-top: 42vh;
+}
+  
+  
+  /*Neon*/
+  
+  #blurred{
+    animation: animate2 4s linear infinite;
+  }
+
+  #blurred1{
+    animation: animate3 4s linear infinite;
+  } 
+
+  #blurred2{
+    animation: animate4 4s linear infinite;
+  } 
+   @keyframes animate2
+  {
+    0%
+    {
+      opacity: 0.3;
+      filter: blur(1px);
+      width:20%;        
+    }
+    50%{
+        opacity: 1;
+        filter: 
+        drop-shadow(12px 12px 13px rgb(248, 245, 245));
+        width:20%;  
+    }
+    100%
+    {
+      opacity: 0.3;
+      filter: blur(1px);
+      width:20%;        
+    }
+  }
+  @-webkit-keyframes animate2
+  {
+    0%
+    {
+      opacity: 0.3;
+      filter: blur(1px);
+      width:20%;        
+    }
+    50%{
+        opacity: 1;
+        filter: 
+        drop-shadow(4px 4px 13px rgb(248, 245, 245));
+        width:20%;  
+    }
+    100%
+    {
+      opacity: 0.3;
+      filter: blur(1px);
+      width:20%;        
+    }
+  } 
+   
+  @keyframes animate3
+  {
+    0%
+    {
+      filter: blur(1px) drop-shadow(1.5px 1.5px 9px rgb(216, 8, 8));
+      width:20%;     
+    }
+    50%{
+        filter: 
+        drop-shadow(4px 4px 13px rgb(248, 245, 245));
+        width:20%;  
+    }
+    100%
+    {
+      filter:blur(1px) drop-shadow(1.5px 1.5px 9px rgb(216, 8, 8));
+      width:20%;        
+    }
+  }
+  @-webkit-keyframes animate3
+  {
+    0%
+    {
+      filter:blur(1px) drop-shadow(1.5px 1.5px 9px rgb(216, 8, 8));
+      width:20%;        
+    }
+    50%{
+        filter: 
+        drop-shadow(4px 4px 13px rgb(248, 245, 245));
+        width:20%;  
+    }
+    100%
+    {
+      filter:blur(1px) drop-shadow(1.5px 1.5px 9px rgb(216, 8, 8));
+      width:20%;        
+    }
+  } 
+
+  @keyframes animate4
+  {
+    0%
+    {
+      filter: drop-shadow(1.5px 1.5px 9px rgb(216, 8, 8));
+      width:20%;     
+    }
+    50%{
+        filter: 
+        drop-shadow(4px 4px 13px rgb(238, 15, 15));
+        width:20%;  
+    }
+    100%
+    {
+      filter: drop-shadow(1.5px 1.5px 9px rgb(216, 8, 8));
+      width:20%;     
+    }
+  }
+  @-webkit-keyframes animate4
+  {
+    0%
+    {
+      filter: drop-shadow(1.5px 1.5px 9px rgb(216, 8, 8));
+      width:20%;        
+    }
+    50%{
+        filter: 
+        drop-shadow(4px 4px 13px rgb(238, 15, 15));
+        width:20%;  
+    }
+    100%
+    {
+      filter: drop-shadow(1.5px 1.5px 9px rgb(216, 8, 8));
+      width:20%;     
+    }
+  } 
+  body{
+    margin: 0;
+    background: black;
+    overflow: hidden;
+  }
+  img{
+    position: absolute;
+    width:30%;
+  }
